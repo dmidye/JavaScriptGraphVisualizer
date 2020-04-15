@@ -8,6 +8,7 @@
   var tempNode;
   const startHeight = 60;
   const startWidth = 500;
+  var sizeFlag = false;
   
   function Node(key, width, height, left, right, position, level, parent) {
 	this.key = key;
@@ -54,12 +55,10 @@
 	  tempKey = undefined;
 
 	  tempKey = values[values.length-1];//tempKey is used to fix an issue with drawing travel nodes down both sides of the tree
-	  console.log("temp key " + tempKey);
 	  var numCalls = 0;
 	  var position = 1;
 	  if(this.root == null) {//if root is null, assign the parsed value to root and push value to values list then draw node
 		  this.root = new Node(values[0], 500, 40, null, null, 1, 0);
-		  console.log("drawing root " + values[0]);
 	      this.nodes.push(root);
 		  drawNode(this.root);
 	  } else {
@@ -105,10 +104,11 @@
 		drawLinesOne(ctx, nodes[nodes.length-1]);
 	  }, (len+1)*delay);
 	  
-	  //wait for travel to finish to erase nodes and enable the 'Add' button
+	  //Do everything that needs to be done after the travel is complete
 	  setTimeout(function(){
 		eraseNodes(eraseThese);
 		document.getElementById("add-one").disabled = false;
+		drawNodesInstant();
 	  }, (len+1)*delay);
 	  
 	  //get the lists for orders
@@ -117,16 +117,6 @@
 	  inorder();
 	  breadthFirst();
  }
-
-  function createTree(startHeight, startWidth) {//maybe only use for adding lists????
-	  var numCalls = 0;
-	  var position = 1;
-	  
-	  for(let i = 1; i < values.length; i++) {
-		  tempKey = values[i];
-		  insert(values[i], startWidth, startHeight, position, numCalls);
-	  }
-  }
   
   function insert(key, width, height, position, numCalls) {
 	  addNode(this.root, key, width, height, position, numCalls, this.root);

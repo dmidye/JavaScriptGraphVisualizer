@@ -63,6 +63,7 @@
 		<div class="canvas">
 			<canvas id="canvasArea" width="1000" height="500" style="border:2px solid black"></canvas>
 		</div>
+		
 	</div>
 	
 	

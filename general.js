@@ -70,12 +70,14 @@ function enableButtonsForAddOne() {
 		this.inorderNodes = [];
 		breadthFirstNodes = [];
 		tempQueue = [];
+		sizeFlag = false;
 	    document.getElementById("node-one").disabled = true;
 	    document.getElementById("node-list").disabled = false;
 		document.getElementById("show-tree").disabled = false;
 		document.getElementById("add-one").disabled = true;
 	  }
 	  else {
+		sizeFlag = false;
 		values = [];
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		this.tempNode = null;
