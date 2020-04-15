@@ -1,0 +1,150 @@
+html, body {
+  margin:0; padding:0;
+  min-width: 100%;
+  font-family: Perpetua;
+  background-color: #e6f7ff;
+}
+
+.outer {
+
+}
+
+.enter-list {
+  padding-left: 20px;
+}
+
+.enter-list input {
+  display: block;
+  margin-left: 10px;
+}
+
+.enter-list label {
+  display:block;
+}
+
+.aList label {
+  display: inline-block;
+}
+
+.aList input {
+  display: inline-block;
+}
+
+.enter-one {
+  padding-left: 20px;
+ 
+}
+
+.enter-one input {
+  margin-left: 10px;
+}
+
+.one {
+  
+}
+
+.addBtn {
+  float: right;
+  padding-right: 30px;
+}
+
+.addBtn button {
+  height: 27px;
+}
+
+.one input {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.canvas {
+  padding-top: 10px;
+  padding-right: 8px;
+  float: right; 
+}
+
+.list-box {
+  display: block;
+}
+
+.preorderBtn {
+  float: left;
+  padding-right: 10px;
+}
+
+.postorderBtn {
+  float:right;
+}
+
+.orderBtns {
+  padding: 10px;
+}
+
+.inorderBtn {
+}
+
+#footer {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height: 2.5rem;  
+}
+
+.sidebar {
+  float: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 50px;
+}
+
+.sidebar button, div { 
+  display: block;
+}
+
+.head {
+  background-color: #99ccff;
+  padding-left: 20px;
+}
+
+.topNavAndProfile {
+  height:50px;
+  overflow-y: hidden;
+}
+
+/* Add a background color to the top navigation */
+.topnav {
+  width: 100%;
+  height:58px;
+  background-color: #6699ff;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #3399ff;
+  color: white;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
